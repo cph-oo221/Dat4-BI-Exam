@@ -13,11 +13,12 @@ Since carbon emissions have such a big impact on the greenhouse effect, every ca
 In this analysis we will try to identify patterns in normal individual peoples lifestyle factors, that contribute to their total carbon emissions, to make people more aware of how their lifestyle affects the climate.
 
 ## Context and Purpose:
+
 In a world of climate change, it is important to reflect on the different things that affect this phenomena,
 to understand it better, and realize it's consequences
 
 The purpose of this analysis, is to better understand how the indivual lifestyles affect total
-carbon emissions. 
+carbon emissions.
 to understand how individual people can help the environment by being aware of how their lifestyle
 affect these carbon emissions.
 Make it easier for normal people to make educated decisions on how to have a more positive impact on the climate.
@@ -72,7 +73,7 @@ This project will be executed in 4 sprints, a sprint is 1. week period (approxim
 
 | Sprint | Start Date | End Date   | Goal                                |
 | :----: | ---------- | ---------- | ----------------------------------- |
-|   1    | xx-xx-2024 | 19-02-2024 | Problem Formulation                 |
+|   1    | 12-02-2024 | 19-02-2024 | Problem Formulation                 |
 |   2    | 19-02-2024 | 26-02-2024 | Data Collection and Preprocessing   |
 |   3    | 26-02-2024 | 11-03-2024 | Model Development and Testing       |
 |   4    | 11-03-2024 | 14-03-2024 | Deployment and Usability Evaluation |
