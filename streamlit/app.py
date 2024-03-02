@@ -23,7 +23,6 @@ banner = """
 
 st.markdown(banner, unsafe_allow_html=True)
 
-
 st.markdown(
     """
     ###
@@ -35,5 +34,6 @@ st.markdown(
     
     ### Check out
     - [Carbon Emissions Calculator](/Calculate)
+    - [Visualization](/Visualization)
 """
 )
