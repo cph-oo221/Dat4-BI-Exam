@@ -10,7 +10,10 @@ column_indexes = ['Body Type', 'Diet', 'How Often Shower', 'Heating Energy Sourc
        'Waste Bag Size', 'Waste Bag Weekly Count',
        'How Many New Clothes Monthly']
 
-st.set_page_config(page_title="MP4", page_icon="🧊")
+st.set_page_config(
+    page_title="MP4", 
+    page_icon="🧊"
+)
 
 st.sidebar.header("Menu Options", divider=True)
 
