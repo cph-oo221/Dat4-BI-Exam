@@ -1,20 +1,28 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 
 st.set_page_config(page_title="MP4", page_icon="🧊")
 
 st.sidebar.header("Menu Options", divider=True)
 
-
 st.markdown(
     """
-    
     ### Calculate Carbon Emissions from Lifestyle Factors:
+    <style>
+        .stButton>button:focus:not(:active) {
+            border: none !important;
+        }
+        .stButton>button:hover {
+            border-color: green !important;
+        }
 
+    </style>
     """
-)
+, unsafe_allow_html=True)
 
 df = pd.read_csv("../data/Carbon-Emission.csv")
+df = df.replace(np.nan, 'None')
 
 def get_df_columns(df):
     
@@ -42,7 +50,9 @@ def calculate_carbon_emission(df):
 
 entered_values = calculate_carbon_emission(df)
 
-submit = st.button("Calculate Carbon Emission")
+submit = st.button(":green[Calculate Carbon Emission]")
 
 if submit:
+    # ofc should actually calculate the carbon emission here
+    # for now just print the entered values
     entered_values
