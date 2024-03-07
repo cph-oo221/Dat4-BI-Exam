@@ -95,7 +95,7 @@ def get_numeric_df(df) -> pd.DataFrame:
 if submit:
     # ofc should actually calculate the carbon emission here
     # for now just print the entered values
-    loaded_model = pickle.load(open('../forest_model.pkl', 'rb'))
+    loaded_model = pickle.load(open('../models/forest_model.pkl', 'rb'))
     df = pd.DataFrame(entered_values, index=[0])
 
     df = df[column_indexes]
