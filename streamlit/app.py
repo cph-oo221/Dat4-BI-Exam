@@ -33,7 +33,8 @@ st.markdown(
     lifestyle factors, that contribute to their total carbon emissions, to make people more aware of how their lifestyle affects the climate."
     
     ### Check out
-    - [Carbon Emissions Calculator](/Calculate)
+    - [Carbon Emissions Classifier](/Classify)
     - [Visualization](/Visualization)
+    - [Neural Network Prediction](/ANN)
 """
 )
