@@ -38,13 +38,13 @@ st.markdown(
 df_loaded = pd.read_csv("../data/Carbon-Emission.csv")
 df_loaded = df_loaded.replace(np.nan, 'None')
 
-df_loaded_encoded = df_loaded.copy()
+# df_loaded_encoded = df_loaded.copy()
 
-label_encoder = LabelEncoder()
-cate_columns = df_loaded.select_dtypes(include=['object']).columns
+# label_encoder = LabelEncoder()
+# cate_columns = df_loaded.select_dtypes(include=['object']).columns
 
-for column in cate_columns:
-    df_loaded_encoded[column] = label_encoder.fit_transform(df_loaded[column])
+# for column in cate_columns:
+#     df_loaded_encoded[column] = label_encoder.fit_transform(df_loaded[column])
 
 def get_df_columns(df):
 
@@ -80,37 +80,33 @@ submit = st.button(":green[Calculate Carbon Emissions]")
 
 def get_numeric_df(df) -> pd.DataFrame:
     # Encode/transform data numeric
-    label_encoder = pickle.load(open('../models/label_encoder.pkl', 'rb')) # Does not work??
+    encoder = pickle.load(open('../models/encoder.pkl', 'rb')) # Does not work??
 
     # Making copy of df to a new dataframe called: df_numeric 
-    df_numeric = df
+    df_numeric = df.copy()
 
     cate_columns = ['Body Type', 'Sex', 'Diet', 'How Often Shower', 'Heating Energy Source',
        'Transport', 'Vehicle Type', 'Social Activity',
        'Frequency of Traveling by Air', 'Waste Bag Size', 'Energy efficiency',
        'Recycling', 'Cooking_With']
 
-    for column in cate_columns:
-        df_numeric[column] = label_encoder.transform(df[column])
+    df_numeric[cate_columns] = encoder.transform(df[cate_columns])
 
     return df_numeric
 
 if submit:
     loaded_model = pickle.load(open('../models/nn_model.pkl', 'rb'))
+    loaded_scaler = pickle.load(open('../models/scaler.pkl', 'rb'))
     df = pd.DataFrame(entered_values, index=[0])
-    st.write(df)
 
     df = df[column_indexes]
-    st.write(df)
 
     df_numeric = get_numeric_df(df)
-    st.write(df_numeric)
-    scaled = StandardScaler().fit_transform(df_numeric)
-    st.write(scaled)
 
+    X = loaded_scaler.transform(df_numeric.values)
 
-    # Predicting the carbon emission
-    # prediction = loaded_model.predict(scaled)
-    # # value = trans_value(prediction[0])
-    # st.write(f"**Your predicted carbon emission is:**\n")
-    # st.write(f"### :blue[{prediction[0,0]} in kg CO2 per month]")
+    # Predicting the carbon emissions
+    prediction = loaded_model.predict(X)
+    # value = trans_value(prediction[0])
+    st.write(f"**Your predicted carbon emission is:**\n")
+    st.write(f"### :blue[{(prediction[0,0] / 12)} in kg CO2 per month]")
