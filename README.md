@@ -35,6 +35,7 @@ It can help society educate people on lifestyle choices and discourage harmful b
 - Can an individuals carbon emissions be predicted by their lifestyle factors?
 - Which lifestyle factor have the biggest impact on carbon emissions?
 - How can this information be used by individuals and the society for reducing carbon emissions?
+- Can we predict a persons carbon emissions from these factors?
 
 H0 = an individuals carbon emissions have no relation to their lifestyle factors
 
@@ -85,3 +86,26 @@ This project will be executed in 4 sprints, a sprint is 1. week period (approxim
 - **IDE:** Visual Studio Code (VSCode) & Jupyter Notebook
 
 - **Software Tools:** Git, GitHub, Anaconda, Streamlit & Python (Pandas, Numpy, Matplotlib, Seaborn, Plotly, Scikit-learn, TensorFlow, Keras, XGBoost, Yellowbrick, Graphviz)
+
+## Conclusion of research
+
+**H0**
+This hypothesis is definetely false, since there is clear correlation between lifestyle factors and carbon emissions
+
+**H1**
+We can conclude that given the same formatted inputs, we can train regression and ANN models to predict an individuals carbon emissions
+with a model accuracy of around 97% to 98%
+
+**H2**
+According to our discoveries, the most significant factor
+for individual carbon emissions is style of transport (i. e public or private vehicles) and how many kilometers driven in a private vehicle a month. 
+
+**H3**
+Out of all the factors we have available in our data, many of the factors had very little correlation to the total carbon emission output, and a few had a little correlation, and even fewer had a strong correlation.
+This gives insight in how the different factors weigh more or less in the total output of carbon emissions, which might be useful for interested parts
+
+**H4**
+We have used 10000 entries of synthetically generated data from research papers, and we have used standard recognized methods of data-analysis for our models, which gives us accuracy of around 97% for predictions. We believe our conclusions accurately represents reality.
+
+**H5**
+We have found a small correlation of daily internet usage, with total carbon output, but we have been unable to find any clear tendency between people who spend a lot of time on the internet, and people who emit a lot of carbon. We therefore conclude, that theres no significant impact from this factor.
