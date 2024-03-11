@@ -35,7 +35,6 @@ It can help society educate people on lifestyle choices and discourage harmful b
 - Can an individuals carbon emissions be predicted by their lifestyle factors?
 - Which lifestyle factor have the biggest impact on carbon emissions?
 - How can this information be used by individuals and the society for reducing carbon emissions?
-- Can we predict a persons carbon emissions from these factors?
 
 H0 = an individuals carbon emissions have no relation to their lifestyle factors
 
@@ -87,7 +86,13 @@ This project will be executed in 4 sprints, a sprint is 1. week period (approxim
 
 - **Software Tools:** Git, GitHub, Anaconda, Streamlit & Python (Pandas, Numpy, Matplotlib, Seaborn, Plotly, Scikit-learn, TensorFlow, Keras, XGBoost, Yellowbrick, Graphviz)
 
+- **Visualization and interaction** Streamlit
+
 ## Conclusion of research
+
+In conclusion of our research, we can say it is definetely possible to predict carbon emissions from lifestyle factors.
+We found correlating features which has a big impact on the carbon output, transport choices being among the top.
+We have created a simple frontend application with streamlit, where a user can get predictions from our models, by inputting their own lifestyle factors
 
 **H0**
 This hypothesis is definetely false, since there is clear correlation between lifestyle factors and carbon emissions
