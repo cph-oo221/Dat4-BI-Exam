@@ -230,6 +230,72 @@ st.image("./graphs/distributions.png")
 
 st.markdown(
     """
+    ## Model Training:
+
+    We have applied 8 different machine learning models to the data to see which one performs the best or to further explore the data and the relationships between the different factors.
+    """
+)
+
+st.image("./graphs/XGB.png")
+
+st.markdown(
+    """
+The XGBoost model looks to have the best accuracy, with a score of 0.9747 on the test set, with only a MAE of 123.98. 
+    
+Regression results:
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ML models</th>
+      <th>r2</th>
+      <th>MAE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>XGBRegressor</td>
+      <td>0.974770</td>
+      <td>123.986466</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>LinearRegression</td>
+      <td>0.605501</td>
+      <td>524.908445</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>SVR</td>
+      <td>0.105251</td>
+      <td>725.583154</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    """
+, unsafe_allow_html=True)
+
+
+
+
+st.markdown(
+    """
     ## Key Findings:
     """
 )
