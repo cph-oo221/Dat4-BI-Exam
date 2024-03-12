@@ -78,6 +78,15 @@ st.markdown(
     This is also supported by the scatter plot below, where we can see a clear positive correlation between the vehicle monthly distance km and the carbon emissions.
     """
 )
+st.image("./graphs/frequency_sex.png")
+
+st.markdown(
+    """
+    From the frequency distribution we can see that there are no significant differences between Male and Female, almost a 50/50 split.
+
+    """
+)
+
 st.markdown("""
 Other high correlation factors:
             
@@ -97,6 +106,18 @@ Since vehicle type, Transport method and monthly distance are naturally highly c
 """)
 
 st.image("./graphs/scatter_vehicle_monthly_distance_km_vs_carbon_emission.png")
+
+col1, col2 = st.columns(2)
+
+col1.image("./graphs/frequency_vehicletype.png")
+col2.image("./graphs/frequency_transport.png")
+
+st.markdown(
+    """
+    In the sample data, the majority of people dont own a car (around 60% ), and more then 33% travel by bike/walk. 
+    """
+)
+            
 
 col1, col2 = st.columns(2)
 st.markdown(
