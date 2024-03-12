@@ -43,26 +43,16 @@ st.markdown(
     ### Data Exploration:
     
     Heatmap of the correlation between the different lifestyle factors and the total carbon emissions.
-    This helps us to assess the strength of the relationship between the different factors and the carbon emissions. We can use this information to decide
-    what factors to focus on when trying to predict carbon emissions.
-"""
+    This helps us to assess the strength of the relationship between the different factors and the carbon emissions. We can use this information to discover important
+    factors for further research and analysis.
+    """
 )
-
 st.image("./graphs/heatmap.png")
 
 st.markdown(
     """
-    Scatter plot of Vehicle Monthly Distance Km and Carbon Emissions:
-    """
-)
-
-st.image("./graphs/scatter_vehicle_monthly_distance_km_vs_carbon_emission.png")
-
-
-st.markdown(
-    """
     ## Gender Differences
-    Correlation differences males and females are pretty much the same:
+    Correlation differences males and females seems to be about the same:
     """
 )
 
@@ -82,15 +72,41 @@ col2.markdown(
 )
 col2.image("./graphs/female_correlation.png")
 
+st.markdown(
+    """
+    From the correlation matrix, we can see that one of the most important factors for carbon emissions is the vehicle monthly distance km.
+    This is also supported by the scatter plot below, where we can see a clear positive correlation between the vehicle monthly distance km and the carbon emissions.
+    """
+)
+st.markdown("""
+Other high correlation factors:
+            
+    - Vehicle Type (0.5)
+            
+    - Transport (0.4)
+            
+    - Frequency of Traveling by Air (0.3)
+            
+Since vehicle types and styles of transport a very highly dependend on the vehicle monthly distance km, we will primarily focus on this factor for further analysis.
+""")
 
+st.image("./graphs/scatter_vehicle_monthly_distance_km_vs_carbon_emission.png")
 
-col1.markdown(
+col1, col2 = st.columns(2)
+st.markdown(
     """
     ## Travel Frequency
+    """
+)
+col1, col2 = st.columns(2)
+col1.markdown(
+    """
     Frequency of traveling by air, with nearly all 4 categories having a similar frequency (25% ish).
+    Theres a small majority of people flying very frequently, and a small minority of people flying rarely.
     """
 )
 col1.image("./graphs/frequency_of_traveling_by_air.png")
+
 
 col2.markdown(
     """
@@ -100,12 +116,69 @@ col2.markdown(
     """)
 col2.image("./graphs/frequency_of_traveling_by_air_mean.png")
 
+col1, col2 = st.columns(2)
+
+st.markdown("""
+              
+**The mean and total sum of carbon emissions for each flight frequence category**
+              
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Frequency of Traveling by Air</th>
+      <th>mean</th>
+      <th>sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>frequently</td>
+      <td>2362.866482</td>
+      <td>5963875</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>never</td>
+      <td>1716.337129</td>
+      <td>4220473</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>rarely</td>
+      <td>1945.872830</td>
+      <td>4819927</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>very frequently</td>
+      <td>3026.455906</td>
+      <td>7687198</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+""", unsafe_allow_html=True)
+
+st.text("")
+
 st.markdown(
     """
     ## Key Findings:
-    Highest correlation between the different lifestyle factors and carbon emissions are:
-    - Vehicle Monthly Distance Km (0.6)
-    - Vehicle Type (0.5)
-    - Transport (0.4)
     """
 )
