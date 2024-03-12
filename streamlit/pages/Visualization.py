@@ -117,6 +117,13 @@ st.markdown(
     In the sample data, the majority of people dont own a car (around 60% ), and more then 33% travel by bike/walk. 
     """
 )
+
+st.markdown("""
+## Internet Usage
+            
+The correlation between internet usage and carbon emissions is very low at 0.1, and the histogram below shows no clear correlation between the two.
+""")
+st.image("./graphs/CarbonEmissionVsHowLongInternetDailyHour.png")
             
 
 col1, col2 = st.columns(2)
@@ -211,19 +218,41 @@ The carbon emissions are around 25% higher on average, for people who fly very f
 st.text("")
 
 st.markdown("""
-### Distributions
+## Declared Energy Efficiency
             
+We can see that people thah categorize themselves as energy efficient, generally tend to have a little bit lower carbon emission in total, but the difference really is only about 1,5% lower than the 'No' category.
+
+The total sum of carbon emissions seems to be higher by people declaring that they're being energy efficient,
+indicating that a lot more people think they are being efficient than not, while not really making any difference in the emitted carbon dioxide!
+""")
+
+col1, col2 = st.columns(2)
+
+col1.image("./graphs/mean_energy_effi.png")
+col2.image("./graphs/sum_energy_effi.png")
+
+
+st.markdown("""
+## Distributions
+""")
+
+col1, col2 = st.columns(2)
+col1.markdown("""
+**All features of the dataset:**
+              
 As we can see, the distribution of distance travelled by vehicle is very skewed, with 75% of the data lying beneath 3000 km pr month, with quite a few outliers being outragerously above the median. This might still be an accurate representation though, since some individuals just might travel that much. 
 We'll keep it for the variance of the data.
 """)
 
-st.image("./graphs/outliers.png")
+col1.image("./graphs/outliers.png")
 
-st.markdown("""
+col2.markdown("""
+**Features of the dataset with a correlation higher than 0.1:**
+              
 The carbon emissions, which is our target value has follows a skewed normal distribution, which might be useful for model training.
 The rest of the features are either categorical, or does not follow a similar pattern, and might need to be transformed for better model performance.
 """)
-st.image("./graphs/distributions.png")
+col2.image("./graphs/distributions.png")
 
 
 
