@@ -87,7 +87,13 @@ Other high correlation factors:
             
     - Frequency of Traveling by Air (0.3)
             
-Since vehicle types and styles of transport a very highly dependend on the vehicle monthly distance km, we will primarily focus on this factor for further analysis.
+Lesser correlating factors:
+    
+    - Waste bag weekyl count (0.2)
+            
+    - How many new clothes a month (0.2)
+            
+Since vehicle type, Transport method and monthly distance are naturally highly correlated, we will focus primarily on the vehicle monthly distance km among these 3.
 """)
 
 st.image("./graphs/scatter_vehicle_monthly_distance_km_vs_carbon_emission.png")
@@ -112,7 +118,7 @@ col2.markdown(
     """
     ##
     ##
-    Carbon Emssions are around 22% higher for people who travel very frequently by air.
+    Mean carbon emissions for people who identify with each category of frequency of traveling by air.
     """)
 col2.image("./graphs/frequency_of_traveling_by_air_mean.png")
 
@@ -174,6 +180,12 @@ st.markdown("""
 </table>
 </div>
 """, unsafe_allow_html=True)
+
+st.text("")
+
+st.markdown("""
+The carbon emissions are around 25% higher on average, for people who fly very frequently, compared to the mean across all categories. 
+""")
 
 st.text("")
 
