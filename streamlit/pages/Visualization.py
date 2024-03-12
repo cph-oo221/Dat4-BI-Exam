@@ -70,20 +70,22 @@ col2.markdown(
 )
 col2.image("./graphs/female_correlation.png")
 
+
+st.markdown(
+    """
+    From the frequency distribution we can see that there are no significant differences between Male and Female, almost a 50/50 split.
+    """
+)
+
+st.image("./graphs/frequency_sex.png")
+
 st.markdown(
     """
     From the correlation matrix, we can see that one of the most important factors for carbon emissions is the vehicle monthly distance km.
     This is also supported by the scatter plot below, where we can see a clear positive correlation between the vehicle monthly distance km and the carbon emissions.
     """
 )
-st.image("./graphs/frequency_sex.png")
-
-st.markdown(
-    """
-    From the frequency distribution we can see that there are no significant differences between Male and Female, almost a 50/50 split.
-
-    """
-)
+st.image("./graphs/scatter_vehicle_monthly_distance_km_vs_carbon_emission.png")
 
 st.markdown("""
 Other high correlation factors:
@@ -102,8 +104,6 @@ Lesser correlating factors:
             
 Since vehicle type, Transport method and monthly distance are naturally highly correlated, we will focus primarily on the vehicle monthly distance km among these 3.
 """)
-
-st.image("./graphs/scatter_vehicle_monthly_distance_km_vs_carbon_emission.png")
 
 col1, col2 = st.columns(2)
 
@@ -257,7 +257,7 @@ col2.image("./graphs/distributions.png")
 
 st.markdown(
     """
-    ## Prediciton And Model Training:
+    ## Predicton And Model Training:
 
     We have used machnie learning models to try to predict the carbon emissions based on the different lifestyle factors.
 
@@ -336,10 +336,10 @@ We experimented with different layers and nodes, and the model was trained using
 st.markdown("""
 #### Results
             
-The best performing model was a 4 layer ANN with 256, 512, 512, 512 nodes, with a test accuracy of 0.9819, and a MAE of 75.59.
-The model was trained for 50 epochs, and the test loss was 109.23.
-            
-The optimal ANN model outperformed the XGBRegressor model, with a higher accuracy and a lower MAE.
+The results show that the accuracy of the model increases with the number of layers and neurons.
+We can see that the accuracy of the model is 0.9819 with 4 layers (256, 512, 512, 512 neurons) The test loss is 109.2275 and the mean absolute error is 75.5905.
+This is the best result we have achieved with the neural network.
+We can also conclude that the neural network has better results the our XGBoost model, that 'only' got an accuracy of 0.9747 and a MAE of 123.9864.
 
 An overview of the different ANN models and their performance:
 
@@ -387,8 +387,35 @@ __[x1,... xn] means the numbers of neurons for each layer in the network__
 |4 lay [128, 256, 512, 512]  | 50     | 0.9713   | 134.8475  | 80.8660 |
 |4 lay [256, 512, 512, 512]  | 50     | 0.9819   | 109.2275  | 75.5905 |
 
-</td></tr></table>
+</td></tr></table><br>
 """, unsafe_allow_html=True)
+
+st.markdown("""
+## Alternative Models
+
+We used a clustering model to see if we could find any patterns in the data, but the results were not very promising.
+The data seems to be too complex to be clustered into any clear groups.
+            
+We also used a classification model to see if we could predict the different categories of carbon emissions, but the model was not very suited
+for this purpose, and are mostly for demonstrative puposes.
+""")
+
+st.markdown("""
+### Clustering Model:
+
+We tried different methods to indentify clusters in the data, for example using dendograms an elbow method to find the optimal number of clusters.
+The results were not very promising, and we could not find any clear clusters in the data.
+We tried to do a PCA to reduce the dimensionality of the data, but this did not help to give any clear information either.
+            
+
+""")
+
+col1, col2 = st.columns(2)
+col1.image("./graphs/dendrogram_hierarchical-clustering.png")
+col2.image("./graphs/discovered_clusters.png")
+
+
+
 
 
 
