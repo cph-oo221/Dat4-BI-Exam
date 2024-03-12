@@ -122,7 +122,7 @@ st.markdown(
 col1, col2 = st.columns(2)
 st.markdown(
     """
-    ## Travel Frequency
+    ## Air travel Frequency
     """
 )
 col1, col2 = st.columns(2)
@@ -209,6 +209,24 @@ The carbon emissions are around 25% higher on average, for people who fly very f
 """)
 
 st.text("")
+
+st.markdown("""
+### Distributions
+            
+As we can see, the distribution of distance travelled by vehicle is very skewed, with 75% of the data lying beneath 3000 km pr month, with quite a few outliers being outragerously above the median. This might still be an accurate representation though, since some individuals just might travel that much. 
+We'll keep it for the variance of the data.
+""")
+
+st.image("./graphs/outliers.png")
+
+st.markdown("""
+The carbon emissions, which is our target value has follows a skewed normal distribution, which might be useful for model training.
+The rest of the features are either categorical, or does not follow a similar pattern, and might need to be transformed for better model performance.
+""")
+st.image("./graphs/distributions.png")
+
+
+
 
 st.markdown(
     """
