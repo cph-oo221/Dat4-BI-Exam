@@ -2,12 +2,10 @@
 
 ## Analysis of carbon emissions, based on individual lifestyle factors
 
-## For MP4 submission look here: [MP4](./Main.ipynb)
-
 ### Group:
 
-- Lasse - Github: **[kotteletfisk](https://github.com/kotteletfisk)**
-- Oskar - Github: **[cph-oo221](https://github.com/cph-oo221)**
+- Lasse Hansen - Github: **[kotteletfisk](https://github.com/kotteletfisk)**
+- Oskar Olsen - Github: **[cph-oo221](https://github.com/cph-oo221)**
 
 ## Problem Statement:
 
