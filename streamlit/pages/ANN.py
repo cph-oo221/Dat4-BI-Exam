@@ -18,8 +18,6 @@ st.set_page_config(
     page_icon="🧊"
 )
 
-st.sidebar.header("Menu Options", divider=True)
-
 st.markdown(
     """
     ### Calculate Carbon Emissions from Lifestyle Factors:

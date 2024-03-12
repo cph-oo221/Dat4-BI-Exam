@@ -6,8 +6,6 @@ st.set_page_config(
     layout="wide"
 )
 
-st.sidebar.header("Menu Options", divider=True)
-
 
 st.title("Analysis of carbon emissions")
 
