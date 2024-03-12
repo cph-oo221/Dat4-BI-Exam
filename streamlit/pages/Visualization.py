@@ -409,18 +409,37 @@ We tried to do a PCA to reduce the dimensionality of the data, but this did not 
             
 
 """)
+st.image("./graphs/dendrogram_hierarchical-clustering.png")
+st.image("./graphs/3d_cluster.png")
 
-col1, col2 = st.columns(2)
-col1.image("./graphs/dendrogram_hierarchical-clustering.png")
-col2.image("./graphs/discovered_clusters.png")
+st.markdown("""
+## Classification
+            
+For demonstrative purposes, we tried to train different classification models without much success.
+We normalized the data to a gaussian distribution, with the mean at 0.
+            
+            
+Then the target feature got binnes into 4 categories, divided by the quartiles of the data.
+The most succesful classification model, was a Random Forest Classifier with n_estimators at 300 and max depth at 13 layers.
+            
+The model was not very useful, since while i got a decent accuracy at 67%, the predictions it made did not have much informational value,
+since the categorizations of the data made the targets vague.
+            
+This is the result of the model testing:
 
+              precision    recall  f1-score   support
 
-
-
-
+                0       0.74      0.79      0.77       356
+                1       0.63      0.53      0.58       395
+                2       0.59      0.57      0.58       367
+                3       0.71      0.80      0.75       382
+         accuracy                           0.67      1500
+        macro avg       0.67      0.68      0.67      1500
+     weighted avg       0.67      0.67      0.67      1500
+""")
 
 st.markdown(
     """
-    ## Key Findings:
+    ## Conclusion
     """
 )
