@@ -11,7 +11,6 @@ st.set_page_config(
     }
 )
 
-st.sidebar.header("Menu Options", divider=True)
 
 banner = """
     <body style="background-color:yellow;">
