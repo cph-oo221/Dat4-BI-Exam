@@ -259,6 +259,143 @@ col2.image("./graphs/distributions.png")
 
 st.markdown(
     """
+    ## Prediciton And Model Training:
+
+    We have used machnie learning models to try to predict the carbon emissions based on the different lifestyle factors.
+
+    We have applied 8 different machine learning models to the data to see which one performs the best or to further explore the data and the relationships between the different factors,
+    including classification, regression, clustering and ANN models.
+    """
+)
+
+st.markdown(
+    """
+### Regression Models:
+
+Data was scaled using a StandardScaler, and the models was trained using a 80/20 train/test split.
+
+The XGBoost model looks to have the best accuracy, with a score of 0.9747 on the test set, with only a MAE of 123.98.
+
+    
+Regression results:
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ML models</th>
+      <th>r2</th>
+      <th>MAE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>XGBRegressor</td>
+      <td>0.974770</td>
+      <td>123.986466</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>LinearRegression</td>
+      <td>0.605501</td>
+      <td>524.908445</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>SVR</td>
+      <td>0.105251</td>
+      <td>725.583154</td>
+    </tr>
+  </tbody>
+</table>
+</div><br>
+    """
+, unsafe_allow_html=True)
+
+st.image("./graphs/XGB.png")
+
+st.markdown("""
+### Artificial Neural Network:
+
+We used a Sequential ANN model from the Keras library.
+We experimented with different layers and nodes, and the model was trained using a 80/20 train/test split.
+""")
+
+st.markdown("""
+#### Results
+            
+The best performing model was a 4 layer ANN with 256, 512, 512, 512 nodes, with a test accuracy of 0.9819, and a MAE of 75.59.
+The model was trained for 50 epochs, and the test loss was 109.23.
+            
+The optimal ANN model outperformed the XGBRegressor model, with a higher accuracy and a lower MAE.
+
+An overview of the different ANN models and their performance:
+
+__[x1,... xn] means the numbers of neurons for each layer in the network__
+
+<table><tr>
+<td>
+
+|Layers                      | Epochs | Accuracy | Test Loss | MAE     |
+|----------------------------| -------| -------- | ----------| --------|
+|1 lay [32]                  | 50     | 0.6514   | 485.4101  | 488.3452|
+|1 lay [64]                  | 50     | 0.6794   | 458.6350  | 457.2778|
+|1 lay [128]                 | 50     | 0.7634   | 360.0965  | 358.2312|
+|1 lay [256]                 | 50     | 0.8073   | 314.0002  | 303.8010|
+|1 lay [512]                 | 50     | 0.8387   | 277.7811  | 267.3893|
+
+
+</td><td>
+
+|Layers                      | Epochs | Accuracy | Test Loss | MAE     |
+|----------------------------| -------| -------- | ----------| --------|
+|2 lay [32, 64]              | 50     | 0.8260   | 305.7189  | 287.4525|
+|2 lay [64, 128]             | 50     | 0.8519   | 280.6377  | 259.1389|
+|2 lay [128, 256]            | 50     | 0.9222   | 195.7561  | 177.1057|
+|2 lay [256, 512]            | 50     | 0.9588   | 154.8777  | 133.3263|
+
+</td></tr>
+
+<tr>
+<td>
+
+|Layers                      | Epochs | Accuracy | Test Loss | MAE     |
+|----------------------------| -------| -------- | ----------| --------|
+|3 lay [32, 64, 128]         | 50     | 0.8919   | 219.7377  | 210.3670|
+|3 lay [64, 128, 256]        | 50     | 0.9469   | 167.5058  | 152.9221|
+|3 lay [128, 256, 512]       | 50     | 0.9755   | 126.4031  | 104.1510|
+|3 lay [256, 512, 512]       | 50     | 0.9800   | 115.4065  | 81.7558 |
+
+</td><td>
+
+|Layers                      | Epochs | Accuracy | Test Loss | MAE     |
+|----------------------------| -------| -------- | ----------| --------|
+|4 lay [32, 64, 128, 256]    | 50     | 0.9787   | 117.9240  | 108.2563|
+|4 lay [64, 128, 256, 512]   | 50     | 0.9792   | 117.7210  | 94.6650 |
+|4 lay [128, 256, 512, 512]  | 50     | 0.9713   | 134.8475  | 80.8660 |
+|4 lay [256, 512, 512, 512]  | 50     | 0.9819   | 109.2275  | 75.5905 |
+
+</td></tr></table>
+""", unsafe_allow_html=True)
+
+
+
+st.markdown(
+    """
     ## Key Findings:
     """
 )
