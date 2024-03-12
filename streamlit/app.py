@@ -5,12 +5,7 @@ st.set_page_config(
     page_icon="🧊",
     layout="wide",
     initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'mailto:tdi@cphbusiness.dk',
-        'About': "https://docs.streamlit.io"
-    }
 )
-
 
 banner = """
     <body style="background-color:yellow;">
