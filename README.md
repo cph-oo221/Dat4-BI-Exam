@@ -81,7 +81,7 @@ This project will be executed in 4 sprints, a sprint is 1. week period (approxim
 
 - **IDE:** Visual Studio Code (VSCode) & Jupyter Notebook
 
-- **Software Tools:** Git, GitHub, Anaconda, Streamlit & Python (Pandas, Numpy, Matplotlib, Seaborn, Plotly, Scikit-learn, TensorFlow, Keras, XGBoost, Yellowbrick, Graphviz)
+- **Software Tools:** Git, GitHub, Anaconda & Python (Pandas, Numpy, Matplotlib, Seaborn, Plotly, Scikit-learn, TensorFlow, Keras, XGBoost, Yellowbrick, Graphviz)
 
 - **Visualization and interaction** Streamlit
 
