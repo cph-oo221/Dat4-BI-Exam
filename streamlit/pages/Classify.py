@@ -17,7 +17,10 @@ st.set_page_config(
 
 st.markdown(
     """
-    ### Calculate Carbon Emissions from Lifestyle Factors:
+    __Here you can try the classification model we trained to predict carbon emissions based on categories.
+    Fill in the form, and the model will predict whether you emissions are Low, Medium, High or Very High__
+
+    ### Calculate Carbon Emissions from Lifestyle Factors with RFC:
     <style>
         .stButton>button:focus:not(:active) {
             border: none !important;
