@@ -5,7 +5,6 @@ import pickle
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 
-
 column_indexes = ['Body Type', 'Sex', 'Diet', 'How Often Shower', 'Heating Energy Source',
        'Transport', 'Vehicle Type', 'Social Activity', 'Monthly Grocery Bill',
        'Frequency of Traveling by Air', 'Vehicle Monthly Distance Km',
@@ -20,7 +19,9 @@ st.set_page_config(
 
 st.markdown(
     """
-    ### Calculate Carbon Emissions from Lifestyle Factors:
+    __Here you can try our most succesful ANN model. Fill in the form and it will predict the amount of carbon dioxide you produce a month__
+
+    ### Calculate Carbon Emissions from Lifestyle Factors with ANN:
     <style>
         .stButton>button:focus:not(:active) {
             border: none !important;
