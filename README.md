@@ -10,7 +10,7 @@
 ## Problem Statement:
 
 Since carbon emissions have such a big impact on the greenhouse effect, every caution must be made to try and minimize these as mush as possible.
-In this analysis we will try to identify patterns in normal individual peoples lifestyle factors, that contribute to their total carbon emissions, to make people more aware of how their lifestyle affects the climate.
+In this analysis we will try to identify patterns in individual peoples lifestyle factors, that contribute to their total carbon emissions, to make people more aware of how their lifestyle affects the climate.
 
 ## Context and Purpose:
 
@@ -90,7 +90,7 @@ This project will be executed in 4 sprints, a sprint is 1. week period (approxim
 
 In conclusion of our research, we can say it is definetely possible to predict carbon emissions from lifestyle factors.
 We found correlating features which has a big impact on the carbon output, transport choices being among the top.
-We have created a simple frontend application with streamlit, where a user can get predictions from our models, by inputting their own lifestyle factors
+We have created a simple frontend application with streamlit, where a user can get predictions from our models, by inputting their own lifestyle factors. Additionally the streamlit app has a page (visualization), that gose through the highligts of our analysis, and shows the most important features/findings.
 
 **H0**
 This hypothesis is definetely false, since there is clear correlation between lifestyle factors and carbon emissions
@@ -101,7 +101,7 @@ with a model accuracy of around 97% to 98%
 
 **H2**
 According to our discoveries, the most significant factor
-for individual carbon emissions is style of transport (i. e public or private vehicles) and how many kilometers driven in a private vehicle a month. 
+for individual carbon emissions is style of transport (i. e public or private vehicles) and how many kilometers driven in a private vehicle a month.
 
 **H3**
 Out of all the factors we have available in our data, many of the factors had very little correlation to the total carbon emission output, and a few had a little correlation, and even fewer had a strong correlation.
