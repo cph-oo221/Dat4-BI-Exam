@@ -9,15 +9,15 @@
 
 ## Problem Statement:
 
-Since carbon emissions have such a big impact on the greenhouse effect, every caution must be made to try and minimize these as mush as possible.
-In this analysis we will try to identify patterns in individual peoples lifestyle factors, that contribute to their total carbon emissions, to make people more aware of how their lifestyle affects the climate.
+Since carbon emissions have such a big impact on the greenhouse effect, every caution must be made to try and minimize these as much as possible.
+In this analysis we will try to identify patterns in individual people’s lifestyle factors, that contribute to their total carbon emissions, to make people more aware of how their lifestyle affects the climate.
 
 ## Context and Purpose:
 
 In a world of climate change, it is important to reflect on the different things that affect this phenomena,
 to understand it better, and realize it's consequences
 
-The purpose of this analysis, is to better understand how the indivual lifestyles affect total
+The purpose of this analysis, is to better understand how the individual lifestyles affect total
 carbon emissions and how an individual can help the environment by being aware of how their lifestyle
 affect these carbon emissions.
 Make it easier for normal people to make educated decisions on how to have a more positive impact on the climate.
