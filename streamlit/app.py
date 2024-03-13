@@ -68,7 +68,7 @@ st.markdown(
 
 In conclusion of our research, we can say it is definetely possible to predict carbon emissions from lifestyle factors.
 We found correlating features which has a big impact on the carbon output, transport choices being among the top.
-We have created a simple frontend application with streamlit, where a user can get predictions from our models, by inputting their own lifestyle factors. Additionally the streamlit app has a page (visualization), that gose through the highligts of our analysis, and shows the most important features/findings.
+We have created a simple frontend application with streamlit, where a user can get predictions from our models, by inputting their own lifestyle factors. Additionally the streamlit app has a page (visualization), that goes through the highlights of our analysis, and shows the most important features/findings.
 
 **H0:**
 This hypothesis is definetely false, since there is clear correlation between lifestyle factors and carbon emissions
