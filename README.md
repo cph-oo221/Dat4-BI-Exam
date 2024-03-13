@@ -18,8 +18,7 @@ In a world of climate change, it is important to reflect on the different things
 to understand it better, and realize it's consequences
 
 The purpose of this analysis, is to better understand how the indivual lifestyles affect total
-carbon emissions.
-to understand how individual people can help the environment by being aware of how their lifestyle
+carbon emissions and how an individual can help the environment by being aware of how their lifestyle
 affect these carbon emissions.
 Make it easier for normal people to make educated decisions on how to have a more positive impact on the climate.
 
