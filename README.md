@@ -10,7 +10,7 @@
 ## Problem Statement:
 
 Since carbon emissions have such a big impact on the greenhouse effect, every caution must be made to try and minimize these as much as possible.
-In this analysis we will try to identify patterns in individual people’s lifestyle factors, that contribute to their total carbon emissions, to make people more aware of how their lifestyle affects the climate.
+In this analysis we will try to identify patterns in individual people’s lifestyle factors. We will see if we can identify which patterns cause the biggest carbon output.
 
 ## Context and Purpose:
 
