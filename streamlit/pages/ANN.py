@@ -108,4 +108,4 @@ if submit:
     prediction = loaded_model.predict(X)
     # value = trans_value(prediction[0])
     st.write(f"**Your predicted carbon emission is:**\n")
-    st.write(f"### :blue[{(prediction[0,0] / 12)} in kg CO2 per month]")
+    st.write(f"### :blue[{prediction[0,0]} in kg CO2 per month]")
